@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/MarinaSergeyeva/js-module-10/issues"
   },
-  "homepage": "https://marinasergeyeva.github.io/js-module-10/",
+  "homepage": "https://marinasergeyeva.github.io/js-module-10/build/index.html",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
