@@ -268,11 +268,11 @@ body.dark-theme {
 /* ====================== MODAL ====================== */
 .modal {
   padding: 1.8rem 2.16rem;
-  width: 1000px;
+  width: 750px;
   max-width: 1300px;
   background: #fff;
   border-radius: 4px;
-  /* text-align: center; */
+  text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   color: black;
 }
@@ -283,13 +283,18 @@ body.dark-theme {
   justify-content: space-between;
 }
 
+.cart-dish__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cart-dish__list-item {
   display: flex;
   margin-right: 30px;
 }
 
 .cart-dish__list-item-block {
-  display: inline-block;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
 }
@@ -301,6 +306,9 @@ body.dark-theme {
 
 .card-order-total {
   margin: 20px auto;
+  margin-right: 120px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .total_quantity {

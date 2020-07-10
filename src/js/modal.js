@@ -8,9 +8,9 @@ import { getTotal } from './cart.js';
 // const openModal = document.querySelector('.card__main-button');
 // const modalTemplate = document.querySelector('#modal');
 
-export const cartModal = () => {
-  console.log('Hello');
+console.log(basicLightbox);
 
+export const cartModal = () => {
   const markup = template(cart.order);
   console.log(markup);
 
@@ -27,8 +27,10 @@ export const cartModal = () => {
   <div class="card-order-total">
   <span class="total_quantity"><b>All products in cart: </b>${
     cart.totalQuantity
-  }</span>
-  <span class="total_sum"><b>Total products price: </b>${cart.totalSum}</span>
+  } serv.</span>
+  <span class="total_sum"><b>Total products price: </b>${
+    cart.totalSum
+  } cred.</span>
     </div>
     ${
       cart.order.length > 0
@@ -60,10 +62,10 @@ export const cartModal = () => {
 
       document.querySelector(
         '.total_sum',
-      ).innerHTML = `<b>Total products price: </b>${cart.totalSum}`;
+      ).innerHTML = `<b>Total products price: </b>${cart.totalSum} cred.`;
       document.querySelector(
         '.total_quantity',
-      ).innerHTML = `<b>All products in cart: </b>${cart.totalQuantity}`;
+      ).innerHTML = `<b>All products in cart: </b>${cart.totalQuantity} serv.`;
     }
     console.log(cart);
   };
