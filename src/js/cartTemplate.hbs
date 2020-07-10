@@ -1,0 +1,10 @@
+{{#each this}}
+<li class="cart-dish__item">
+    <span class="cart-dish__list-item">{{name}}</span>
+    <div class="cart-dish__list-item-block">
+        <span class="cart-dish__list-item">{{quantity}}</span>
+        <span class="cart-dish__list-item">{{price}}</span>
+        <button class="remove" data-id="{{id}}">remove</button>
+    </div>
+</li>
+{{/each}}

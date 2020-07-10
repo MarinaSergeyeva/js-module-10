@@ -1,31 +1,55 @@
-const cart = {
+import { cartModal } from './modal';
+
+const refs = {
+  cartBtn: document.querySelector('.card__main-button'),
+};
+
+console.log(document.querySelector('.card__main-button'));
+console.log(refs.cartBtn);
+
+export const cart = {
   order: [],
   totalSum: 0,
   totalQuantity: 0,
 };
 
 export const addToCart = dish => {
-  cart.order = [
-    ...cart.order,
-    {
-      id: dish.id,
-      name: dish.name,
-      price: dish.price,
-      quantity: 1,
-    },
-  ];
+  const result = cart.order.find(item => item.name === dish.name);
+  if (!result) {
+    cart.order = [
+      ...cart.order,
+      {
+        id: dish.id,
+        name: dish.name,
+        price: dish.price,
+        quantity: 1,
+      },
+    ];
+  } else {
+    cart.order = cart.order.map(item => {
+      if (item.name === dish.name) {
+        return {
+          ...item,
+          quantity: item.quantity + 1,
+        };
+      } else {
+        return item;
+      }
+    });
+  }
+
   getTotal();
   console.log(cart);
 };
 
-const removeFromCart = id => {
+export const removeFromCart = id => {
   cart.order = cart.order.filter(dish => dish.id !== id);
   getTotal();
 };
 
-const getTotal = () => {
+export const getTotal = () => {
   cart.totalSum = cart.order.reduce((acc, dish) => {
-    acc += dish.price;
+    acc += dish.price * dish.quantity;
     return acc;
   }, 0);
   cart.totalQuantity = cart.order.reduce((acc, dish) => {
@@ -34,6 +58,7 @@ const getTotal = () => {
   }, 0);
 };
 
+refs.cartBtn.addEventListener('click', cartModal);
 // =============================================================
 
 // import products from '../menu.json';

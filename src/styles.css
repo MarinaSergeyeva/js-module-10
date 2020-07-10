@@ -275,3 +275,15 @@ body.dark-theme {
   text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
+
+.cart-dish__item,
+.cart-dish__list-item-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  text-align: center;
+  text-transform: uppercase;
+}
