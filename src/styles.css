@@ -267,23 +267,42 @@ body.dark-theme {
 
 /* ====================== MODAL ====================== */
 .modal {
-  padding: 1.8rem 2.16rem 0.9rem;
-  width: 550px;
+  padding: 1.8rem 2.16rem;
+  width: 1000px;
   max-width: 1300px;
   background: #fff;
   border-radius: 4px;
-  text-align: center;
+  /* text-align: center; */
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  color: black;
 }
 
-.cart-dish__item,
-.cart-dish__list-item-block {
+.cart-dish__item {
   display: flex;
+  display: list-item;
   justify-content: space-between;
+}
+
+.cart-dish__list-item {
+  display: flex;
+  margin-right: 30px;
+}
+
+.cart-dish__list-item-block {
+  display: inline-block;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.modal-title {
+.modal__form-title {
   text-align: center;
   text-transform: uppercase;
+}
+
+.card-order-total {
+  margin: 20px auto;
+}
+
+.total_quantity {
+  margin-right: 30px;
 }

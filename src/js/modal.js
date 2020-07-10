@@ -20,7 +20,7 @@ export const cartModal = () => {
     <div class="modal__form-wrapper"><h2 class="modal__form-title">Cart</h2>
   ${
     cart.order.length > 0
-      ? `<ul class="order-list">${markup}</ul>`
+      ? `<ol class="order-list">${markup}</ol>`
       : `<p>No products in cart</p>`
   }
   <hr>
